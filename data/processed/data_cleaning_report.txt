@@ -1,0 +1,132 @@
+======================================================================
+DATA CLEANING REPORT - Task 1.2
+======================================================================
+Generated: 2026-01-15 12:40:41
+
+======================================================================
+1. NIFTY 50 SPOT DATA CLEANING
+======================================================================
+Original Records: 19912
+Final Records: 19912
+
+Missing Values:
+  - Detected: 0
+  - Imputed: 0
+  - Method: Forward fill + backward fill for edge cases
+
+Outliers:
+  - Detected: 0
+  - Removed/Corrected: 0
+  - Method: IQR-based detection (1.5x IQR threshold)
+
+Price Range (after cleaning):
+  - Min: 19188.51
+  - Max: 24910.84
+  - Mean: 21118.03
+
+======================================================================
+2. NIFTY FUTURES DATA CLEANING
+======================================================================
+Original Records: 19912
+Final Records: 19912
+
+Missing Values:
+  - Detected: 0
+  - Imputed: 0
+
+Outliers:
+  - Detected: 1
+  - Corrected: 1
+
+Contract Rollover Handling:
+  - Rollovers Detected: 11
+  - Rollover Dates: ['2025-01-31', '2025-02-28', '2025-03-28', '2025-04-25', '2025-05-30', '2025-06-27', '2025-08-01', '2025-08-29', '2025-09-26', '2025-10-31', '2025-11-28']
+  - Method: Continuous contract adjustment using ratio method
+
+Basis Statistics (Futures - Spot):
+  - Mean Basis: 39.53
+  - Max Basis: 109.66
+  - Min Basis: -4.26
+
+======================================================================
+3. NIFTY OPTIONS DATA CLEANING
+======================================================================
+Original Records: 15650
+Final Records: 15650
+
+Missing Values:
+  - Detected: 0
+  - Imputed: 0
+
+Outliers (IV-based):
+  - Detected: 0
+  - Corrected: 0
+
+Dynamic ATM Strike Calculation:
+  - ATM Strikes Recalculated: 0
+  - Strike Interval: 50
+  - Method: Round(Spot Price / Strike Interval) * Strike Interval
+
+IV Statistics (after cleaning):
+  - Mean IV: 17.41%
+  - Min IV: 10.06%
+  - Max IV: 25.85%
+
+======================================================================
+4. TIMESTAMP ALIGNMENT
+======================================================================
+Common Timestamps: 19912
+Spot-only Timestamps: 0
+Futures-only Timestamps: 0
+Options-only Timestamps: 0
+
+Date Range: 2025-01-15 to 2026-01-15
+Trading Days: 262
+
+======================================================================
+5. SUMMARY
+======================================================================
+Total Records Processed: 55474
+Total Missing Values Handled: 0
+Total Outliers Corrected: 1
+Data Quality Score: 100.0%
+
+Cleaning Methods Applied:
+  1. Missing Values: Forward-fill (ffill) with backward-fill (bfill) for edges
+  2. Outliers: IQR method with 1.5x threshold, replaced with rolling median
+  3. Timestamp Alignment: Inner join on common timestamps
+  4. Futures Rollover: Ratio-based continuous contract adjustment
+  5. ATM Strike: Dynamic calculation based on spot price
+
+======================================================================
+6. PROCESSING LOG
+======================================================================
+[2026-01-15 12:40:40]   Options: 15650 records
+[2026-01-15 12:40:40] 
+Cleaning NIFTY 50 Spot data...
+[2026-01-15 12:40:41]   Spot: 0 missing values detected
+[2026-01-15 12:40:41]   Spot cleaning complete: 19912 records
+[2026-01-15 12:40:41] 
+Cleaning NIFTY Futures data...
+[2026-01-15 12:40:41]   Futures: 0 missing values detected
+[2026-01-15 12:40:41]   Detected 11 contract rollovers
+[2026-01-15 12:40:41]   Futures cleaning complete: 19912 records
+[2026-01-15 12:40:41] 
+Cleaning NIFTY Options data...
+[2026-01-15 12:40:41]   Options: 0 missing values detected
+[2026-01-15 12:40:41]   Recalculated ATM for 1565 timestamps
+[2026-01-15 12:40:41]   Options cleaning complete: 15650 records
+[2026-01-15 12:40:41] 
+Aligning timestamps across datasets...
+[2026-01-15 12:40:41]   Aligned spot: 19912 records
+[2026-01-15 12:40:41]   Aligned futures: 19912 records
+[2026-01-15 12:40:41]   Aligned options: 15650 records
+[2026-01-15 12:40:41] 
+Data Quality Score: 100.0%
+[2026-01-15 12:40:41] ============================================================
+[2026-01-15 12:40:41] Data Cleaning Pipeline Complete
+[2026-01-15 12:40:41] ============================================================
+
+======================================================================
+END OF REPORT
+======================================================================

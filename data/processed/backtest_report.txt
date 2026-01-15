@@ -1,0 +1,104 @@
+================================================================================
+BACKTEST REPORT
+================================================================================
+
+Strategy: 5/15 EMA Crossover with Regime Filter
+Train/Test Split: 70% / 30%
+Initial Capital: 100,000
+
+================================================================================
+TRAINING PERIOD
+================================================================================
+Period: 2025-01-15 to 2025-09-29
+
+PERFORMANCE METRICS:
+  Total Return:        -0.5157%
+  Total Return Points: -515.73
+  Sharpe Ratio:        -5.7666
+  Sortino Ratio:       -2.8118
+  Calmar Ratio:        -0.7117
+  Max Drawdown:        0.9818%
+
+TRADE METRICS:
+  Total Trades:        259
+  Win Rate:            28.19%
+  Profit Factor:       0.9178
+  Avg Trade Duration:  11.85 bars
+
+TRADE BREAKDOWN:
+  Long Trades:         160
+  Short Trades:        99
+  Winning Trades:      73
+  Losing Trades:       186
+
+P&L STATISTICS:
+  Avg Win:             78.84 points
+  Avg Loss:            -33.71 points
+  Max Win:             377.96 points
+  Max Loss:            -99.78 points
+
+================================================================================
+TESTING PERIOD
+================================================================================
+Period: 2025-09-29 to 2026-01-15
+
+PERFORMANCE METRICS:
+  Total Return:        0.5956%
+  Total Return Points: 595.63
+  Sharpe Ratio:        -3.3984
+  Sortino Ratio:       -1.7675
+  Calmar Ratio:        3.6054
+  Max Drawdown:        0.5261%
+
+TRADE METRICS:
+  Total Trades:        105
+  Win Rate:            37.14%
+  Profit Factor:       1.2516
+  Avg Trade Duration:  69.90 bars
+
+TRADE BREAKDOWN:
+  Long Trades:         34
+  Short Trades:        71
+  Winning Trades:      39
+  Losing Trades:       66
+
+P&L STATISTICS:
+  Avg Win:             75.97 points
+  Avg Loss:            -35.87 points
+  Max Win:             314.03 points
+  Max Loss:            -115.00 points
+
+================================================================================
+FULL PERIOD PERIOD
+================================================================================
+Period: 2025-01-15 to 2026-01-15
+
+PERFORMANCE METRICS:
+  Total Return:        0.0799%
+  Total Return Points: 79.90
+  Sharpe Ratio:        -4.9988
+  Sortino Ratio:       -2.4934
+  Calmar Ratio:        0.0684
+  Max Drawdown:        1.1094%
+
+TRADE METRICS:
+  Total Trades:        364
+  Win Rate:            30.77%
+  Profit Factor:       1.0092
+  Avg Trade Duration:  66.88 bars
+
+TRADE BREAKDOWN:
+  Long Trades:         194
+  Short Trades:        170
+  Winning Trades:      112
+  Losing Trades:       252
+
+P&L STATISTICS:
+  Avg Win:             77.84 points
+  Avg Loss:            -34.28 points
+  Max Win:             377.96 points
+  Max Loss:            -115.00 points
+
+================================================================================
+END OF REPORT
+================================================================================
