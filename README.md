@@ -266,14 +266,6 @@ nifty-quant-trading/
 
 Detailed documentation for each task is available in the `docs/` directory.
 
-## License
-
-MIT License
-
-## Author
-
-Quantitative Trading System Project
-
 ## Acknowledgments
 
 - NSE for market data structure reference
